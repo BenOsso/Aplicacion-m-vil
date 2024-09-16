@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="header-content">
+      <ion-img src="https://seeklogo.com/images/D/duoc-uc-logo-F1437952BE-seeklogo.com.png" class="logo-image"></ion-img>
+      <ion-title>
+        Recuperar Contraseña
+      </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <div class="header-content">
+        <ion-img src="https://seeklogo.com/images/D/duoc-uc-logo-F1437952BE-seeklogo.com.png" class="logo-image-condensed"></ion-img>
+        <ion-title size="large" class="title-animation">Recuperar Contraseña</ion-title>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-item>
+      <ion-input [(ngModel)]="correo" label="Correo" labelPlacement="floating" placeholder="tucorreo@tudominio.cl" type="email"></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="recuperarContrasena()">Enviar</ion-button>
+  </div>
+</ion-content>

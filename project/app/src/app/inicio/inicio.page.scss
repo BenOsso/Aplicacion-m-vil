@@ -1,0 +1,112 @@
+/* home.page.scss */
+
+/* Animaciones */
+@keyframes moveFromLeft {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(-100%); opacity: 0; }
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+  }
+  
+  /* Estilos para el header */
+  ion-header {
+    ion-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; /* Distribuye el espacio entre los elementos */
+      --padding-start: 16px;
+      --padding-end: 16px;
+    }
+  
+    .header-content {
+      display: flex;
+      align-items: center;
+      width: 100%; /* Asegura que el contenedor use el ancho completo */
+    }
+  
+    ion-title {
+      margin-left: 16px; /* Espacio entre la imagen y el título */
+      animation: moveFromLeft 2.5s; /* Animación del título */
+    }
+  }
+  
+  /* Estilos para la imagen del logo */
+  ion-img.logo-image {
+    max-width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    animation: moveFromLeft 2.5s; /* Animación de la imagen */
+  }
+  
+  /* Tamaño para el header condensado */
+  ion-img.logo-image-condensed {
+    max-width: 40px; /* Tamaño para el header condensado */
+    height: auto;
+  }
+  
+  /* Estilos para el contenido */
+  ion-content {
+    --padding: 16px;
+  }
+  
+  /* Contenedor del formulario */
+  #container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Estilos para ion-item */
+  ion-item {
+    --padding-start: 16px;
+    --padding-end: 16px;
+  }
+  
+  /* Estilos para ion-input */
+  ion-input {
+    font-size: 16px;
+  }
+  
+  /* Estilos para ion-button */
+  ion-button {
+    font-size: 16px;
+    padding: 12px;
+    --border-radius: 8px;
+  }
+  
+  /* Estilos para el datetime pequeño */
+  .small-datetime {
+    font-size: 14px; /* Tamaño más pequeño para el datetime */
+  }
+  
+  ion-thumbnail {
+    width: 140px;
+    height: 140px;
+  }
+  /* Estilo para la imagen en el thumbnail */
+.photo-thumbnail {
+  --width: 100px; // Ajusta el tamaño deseado
+  --height: 100px; // Ajusta el tamaño deseado
+}
+
+.photo-thumbnail img {
+  width: 95%;
+  height: 95%;
+  object-fit: cover; // Asegura que la imagen mantenga su proporción sin distorsionar
+}
+
+
+/* Estilo para la etiqueta de la foto */
+.photo-label {
+  font-size: 0.8rem; // Tamaño de fuente ajustado
+  white-space: normal; // Permite el salto de línea
+  word-wrap: break-word; // Asegura que las palabras largas se dividan si es necesario
+  overflow-wrap: break-word; // Para compatibilidad adicional
+}
+
+
+  

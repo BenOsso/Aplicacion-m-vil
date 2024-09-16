@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="header-content">
+      <ion-img src="https://seeklogo.com/images/D/duoc-uc-logo-F1437952BE-seeklogo.com.png" class="logo-image"></ion-img>
+      <ion-title>
+        Inicio
+      </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="welcome-container">
+    <h1>Bienvenido, {{ nombre }} {{ apellido }}!</h1>
+  </div>
+
+  <!-- Botón para docentes -->
+  <ion-button expand="full" (click)="mostrarQR()" *ngIf="rol === 'docente'">
+    Generar QR
+  </ion-button>
+
+  <!-- Botón para estudiantes -->
+  <ion-button expand="full" *ngIf="rol === 'estudiante'" (click)="escaneaQR()">
+    Escanear QR
+  </ion-button>
+
+  <!-- Mostrar imagen QR -->
+  <div *ngIf="mostrarImagenQR" class="qr-container">
+    <img src="assets\icon\qr .jpg" alt="Código QR">
+  </div>
+</ion-content>

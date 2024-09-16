@@ -1,0 +1,15 @@
+ion-tabs {
+  --background: #fff; /* Asegúrate de que el fondo no cubra el contenido */
+}
+
+ion-tab-bar {
+  z-index: 10; /* Asegúrate de que el menú esté encima de otros elementos, pero no cubra todo */
+}
+/* Asegúrate de que el contenido no esté cubierto por el menú */
+ion-content {
+  --padding: 16px;
+}
+ion-content {
+  position: relative;
+  z-index: 1; /* Asegúrate de que el contenido esté encima del menú */
+}
